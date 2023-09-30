@@ -1,17 +1,19 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <navbar/>
   <router-view/>
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+<style>
+@import "assets/css/styles.css";
+.label-warning {
+  background-color: v-bind(primaryColor);
+}
 </style>
+
+<script setup lang="ts">
+import Navbar from "@/components/Navbar.vue";
+import { useConfigStore } from "@/store/config";
+import { storeToRefs } from "pinia";
+
+const { primaryColor } = storeToRefs(useConfigStore())
+</script>

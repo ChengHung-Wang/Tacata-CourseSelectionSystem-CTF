@@ -7,7 +7,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "bootstrap": "^4.6.2",
     "core-js": "^3.6.5",
+    "jquery": "^3.7.1",
+    "jquery-ui": "^1.13.2",
+    "pinia": "^2.1.6",
+    "popper.js": "^1.16.1",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
